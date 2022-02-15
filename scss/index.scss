@@ -33,10 +33,10 @@
     font-weight: 700;
 }
 
-.nav__title {
-    .nav__menu {
+.nav {
+    &__menu {
         display: flex;
-        font-size: 16px;
+        font-size: 17px;
         padding-top: 15px;
         justify-content: space-between;
     
