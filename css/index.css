@@ -33,34 +33,34 @@
   font-weight: 700;
 }
 
-.nav__title .nav__menu {
+.nav__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 16px;
+  font-size: 17px;
   padding-top: 15px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.nav__title .nav__menu .menu-left {
+.nav__menu .menu-left {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
 }
-.nav__title .nav__menu ul {
+.nav__menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
-.nav__title .nav__menu ul a {
+.nav__menu ul a {
   color: #333333;
   font-weight: 400;
   margin-right: 15px;
   text-decoration: none;
 }
-.nav__title .nav__menu .menu-right {
+.nav__menu .menu-right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,28 +68,28 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.nav__title .nav__menu .menu-right .menu__timetable {
+.nav__menu .menu-right .menu__timetable {
   color: #999999;
   padding-right: 25px;
 }
-.nav__title .nav__menu .menu-right .menu__number {
+.nav__menu .menu-right .menu__number {
   padding-right: 25px;
 }
-.nav__title .nav__menu .menu-right .menu__number a {
+.nav__menu .menu-right .menu__number a {
   color: #333333;
   text-decoration: none;
 }
-.nav__title .nav__menu .menu-right .menu__language {
+.nav__menu .menu-right .menu__language {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.nav__title .nav__menu .menu-right .menu__language .language {
+.nav__menu .menu-right .menu__language .language {
   color: #999999;
   text-decoration: none;
   margin-right: 12px;
 }
-.nav__title .nav__menu .menu-right .menu__language span {
+.nav__menu .menu-right .menu__language span {
   width: 1px;
   height: 100%;
   background-color: #999999;
@@ -105,10 +105,7 @@
 .nav__subtitle img {
   margin-right: 45px;
 }
-.nav__subtitle .catalog {
-  margin-right: 20px;
-}
-.nav__subtitle .catalog button {
+.nav__subtitle button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -124,18 +121,19 @@
   font-weight: 600;
   background-color: #1f7d63;
   padding: 0 15px 0 15px;
+  margin-right: 20px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
 }
-.nav__subtitle .catalog button .catalog__burger {
+.nav__subtitle button .catalog__burger {
   display: block;
   position: relative;
   width: 20px;
   height: 14px;
   margin-right: 10px;
 }
-.nav__subtitle .catalog button .catalog__burger span {
+.nav__subtitle button .catalog__burger span {
   position: absolute;
   top: 6px;
   left: 0;
@@ -143,7 +141,7 @@
   height: 2px;
   background-color: #fff;
 }
-.nav__subtitle .catalog button .catalog__burger:after {
+.nav__subtitle button .catalog__burger:after {
   content: "";
   position: absolute;
   left: 0;
@@ -152,7 +150,7 @@
   height: 2px;
   background-color: #fff;
 }
-.nav__subtitle .catalog button .catalog__burger::before {
+.nav__subtitle button .catalog__burger::before {
   content: "";
   position: absolute;
   left: 0;
@@ -263,6 +261,7 @@
   margin-top: 18px;
 }
 .slider a {
+  display: block;
   text-decoration: none;
 }
 .slider a .slider__text {
@@ -289,19 +288,22 @@
 .arrival {
   margin-top: 20px;
 }
-.arrival .arrival__products {
+.arrival__products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
 }
-.arrival .arrival__products .product {
+.arrival__products .product {
   margin-right: 15px;
 }
-.arrival .arrival__products .product .product__img {
+.arrival__products .product .product__img {
   position: relative;
 }
-.arrival .arrival__products .product .product__img .sticker {
+.arrival__products .product .product__img a {
+  display: block;
+}
+.arrival__products .product .product__img .sticker {
   position: absolute;
   top: 0;
   color: #fff;
@@ -311,20 +313,20 @@
   padding: 5px 7px 5px 7px;
   border-radius: 6px;
 }
-.arrival .arrival__products .product .product__name {
+.arrival__products .product .product__name {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.25;
   margin-top: 30px;
 }
-.arrival .arrival__products .product .product__name a {
+.arrival__products .product .product__name a {
   color: #333333;
   text-decoration: none;
 }
-.arrival .arrival__products .product .product__name a:hover {
+.arrival__products .product .product__name a:hover {
   color: #1f7d63;
 }
-.arrival .arrival__products .product .product__price {
+.arrival__products .product .product__price {
   height: 55px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -338,23 +340,23 @@
           justify-content: flex-end;
   margin-top: 30px;
 }
-.arrival .arrival__products .product .product__price .price-before {
+.arrival__products .product .product__price .price-before {
   color: #999999;
   font-size: 1.125rem;
   text-decoration: line-through;
 }
-.arrival .arrival__products .product .product__price .price-after {
+.arrival__products .product .product__price .price-after {
   color: #333333;
   font-size: 1.75rem;
   font-weight: 600;
 }
-.arrival .arrival__products .product .product__btn {
+.arrival__products .product .product__btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-top: 10px;
 }
-.arrival .arrival__products .product .product__btn .btn {
+.arrival__products .product .product__btn .btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,11 +376,11 @@
   border-radius: 6px;
   cursor: pointer;
 }
-.arrival .arrival__products .product .product__btn .btn:hover {
+.arrival__products .product .product__btn .btn:hover {
   background-color: #2eb790;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-.arrival .arrival__products .product .product__btn .btn span {
+.arrival__products .product .product__btn .btn span {
   margin: 3px 0 0 7px;
 }
