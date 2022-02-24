@@ -1,0 +1,13 @@
+.drinks {
+    margin-top: 50px;
+
+    &__title {
+        margin-top: 25px;
+    }
+
+    &__products {
+        display: flex;
+
+        margin-top: 30px;
+    }
+}

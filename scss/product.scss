@@ -1,0 +1,157 @@
+.product {
+    margin-right: 15px;
+
+    &__link {
+        position: relative;
+    }
+
+    &__img {
+        display: block;
+    }
+
+    &__sticker {
+        position: absolute;
+        top: 0;
+
+        color: #fff;
+        background-color: #e44542;
+        font-size: 18px;
+        font-weight: 400;
+
+        padding: 5px 7px 5px 7px;
+        border-radius: 6px;
+    }
+
+    &__name {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.25;
+
+        margin-top: 30px;
+
+        &-link {
+            color: rgb(51, 51, 51);
+
+            text-decoration: none;
+
+            &:hover {
+                color: #1f7d63;
+            }
+        }
+    }
+
+    &__price {
+        margin-top: 30px;
+
+        &-before {
+            color: #999999;
+            font-size: 1.125rem;
+
+            text-decoration: line-through;
+        }
+
+        &-after {
+            color: rgb(51, 51, 51);
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        &-active {
+            padding-bottom: 21px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 210px;
+        height: 38px;
+        margin-top: 10px;
+
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+
+        background-color: rgb(31, 125, 99);
+        
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #2eb790;
+            transition: all .5s;
+        }
+
+        &-img {
+            margin-left: 5px;
+        }
+
+        &-active {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            margin-top: 10px;
+        }
+
+        &-minus {
+            width: 40px;
+            height: 38px;
+            font-size: 24px;
+            border-top-left-radius: 6px;
+            border-bottom-left-radius: 6px;
+            color: #fff;
+
+            border: none;
+            background-color: rgb(31, 125, 99);
+            margin-right: 1px;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2eb790;
+                transition: all .5s;
+            }
+        }
+
+        &-text {
+            width: 130px;
+            height: 38px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fff;
+
+            border: none;
+            background-color: rgb(31, 125, 99);
+            margin-right: 1px;
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2eb790;
+                transition: all .5s;
+            }
+        }
+
+        &-plus {
+            width: 40px;
+            height: 38px;
+            font-size: 24px;
+            border-top-right-radius: 6px;
+            border-bottom-right-radius: 6px;
+            color: #fff;
+
+            border: none;
+            background-color: rgb(31, 125, 99);
+
+            cursor: pointer;
+
+            &:hover {
+                background-color: #2eb790;
+                transition: all .5s;
+            }
+        }
+    }
+}

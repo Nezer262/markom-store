@@ -1,0 +1,33 @@
+.slider {
+    position: relative;
+
+    margin-top: 18px;
+
+    &__link {
+        display: block;
+        text-decoration: none;
+    }
+
+    &__text {
+        position: absolute;
+        top: 46%;
+        left: 20%;
+
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    &__arrow-left {
+        position: absolute;
+        top: 47%;
+        left: 5px;
+    }
+
+    &__arrow-right {
+        position: absolute;
+        top: 47%;
+        right: 5px;
+        transform: rotate(180deg)
+    }
+}
