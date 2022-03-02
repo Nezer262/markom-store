@@ -1,0 +1,397 @@
+import { Header } from "../../components/header/header"
+
+export const mainPage = () => {
+    return `
+    <body>
+        <header>
+            ${Header}
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <div class="slider">
+                    <a class="slider__link" href="#">
+                        <img class="slider__img" src="assets/img/slider.jpg" alt="slider" width="100%" height="450px">
+                        <div class="slider__text">Премиум продукты высокого качества</div>
+                        <div class="slider__arrow-left"><img src="assets/img/arrow.png" alt=""></div>
+                        <div class="slider__arrow-right"><img src="assets/img/arrow.png" alt="logo"></div>
+                    </a>
+                </div>
+        
+                <div class="arrival">
+                    <h3 class="arrival__title title">Новое поступление</h3>
+                    <div class="arrival__products">
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/foreign.png" alt="product" width="220px" height="210px"></a>
+                                <div class="product__sticker">-56%</div>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Авокадо, 1 шт</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before">135 ₽</div>
+                                <div class="product__price-after">59 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/ananas.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Ананас, 1 шт</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before product__price-active"></div>
+                                <div class="product__price-after">146 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/pomegranate.jpg" alt="product" width="220px" height="210px"></a>
+                                <div class="product__sticker">-9%</div>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Гранат, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before">320 ₽</div>
+                                <div class="product__price-after">290 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/grapefruit.jpg" alt="product" width="220px" height="210px"></a>
+                                <div class="product__sticker">-26%</div>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Грейпфрут, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before">190 ₽</div>
+                                <div class="product__price-after">140 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/pear.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Груша дюшес, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before product__price-active"></div>
+                                <div class="product__price-after">89 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/peach.jpg" alt="product" width="220px" height="210px"></a>
+                                <div class="product__sticker">-13%</div>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Персик, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before">110 ₽</div>
+                                <div class="product__price-after">96 ₽</div>
+                            </div>
+                            <!-- <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button> -->
+                            <div class="product__btn-active">
+                                <button class="product__btn-minus">-</button>
+                                <button class="product__btn-text">В корзине 1 кг Перейти</button>
+                                <button class="product__btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner">
+                    <div class="banner__standart">
+                        <div class="banner__standart-item">
+                            <a class="banner__link" href="#"><img class="banner__img" src="assets/img/banner1.jpg" alt="banner" width="665px" height="332.75px"></a>
+                            <div class="banner__text"><a class="banner__text-link" href="#">Торты, десерты, сладкая выпечка</a></div>
+                        </div>
+                        <div class="banner__standart-item">
+                            <a class="banner__link" href="#"><img class="banner__img" src="assets/img/banner2.jpg" alt="banner" width="665px" height="332.75px"></a>
+                            <div class="banner__text"><a class="banner__text-link" href="#">Рыба, икра, морепродукты</a></div>
+                        </div>
+                    </div>
+                    <div class="banner__small">
+                        <div class="banner__small-item">
+                            <a class="banner__link" href="#"><img class="banner__img" src="assets/img/banner3.jpg" alt="banner" width="435px" height="217px"></a>
+                            <div class="banner__text"><a class="banner__text-link" href="#">Овощи</a></div>
+                        </div>
+                        <div class="banner__small-item">
+                            <a class="banner__link" href="#"><img class="banner__img" src="assets/img/banner4.jpg" alt="banner" width="435px" height="217px"></a>
+                            <div class="banner__text"><a class="banner__text-link" href="#">Ягоды</a></div>
+                        </div>
+                        <div class="banner__small-item">
+                            <a class="banner__link" href="#"><img class="banner__img" src="assets/img/banner5.jpg" alt="banner" width="435px" height="217px"></a>
+                            <div class="banner__text"><a class="banner__text-link" href="#">Мясо</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="drinks">
+                    <h3 class="drinks__title title">Вода, соки, напитки</h3>
+                    <div class="drinks__products">
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/orange-juice.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок апельсин, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">120 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/banana-juice.png" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок банан, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">120 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/pomegranate-juice.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок гранат, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">140 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/grapefruit-juice.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок грейпфут, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">120 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/apple-juice.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок яблоко, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before"></div>
+                                <div class="product__price-after">100 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/ananas-juice.png" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Сок ананас, 1 л</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">120 ₽</div>
+                            </div>
+                            <!-- <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button> -->
+                            <div class="product__btn-active">
+                                <button class="product__btn-minus">-</button>
+                                <button class="product__btn-text">В корзине 1 кг Перейти</button>
+                                <button class="product__btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nuts">
+                    <h3 class="nuts__title title">Орехи</h3>
+                    <div class="nuts__products">
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/hazelnut.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Фундук очищенный, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">1600 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/walnuts.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Грецкий орех, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">1110 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/pistachios.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Фисташки в скорлупе, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">900 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/cashew.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Кешью, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">1128 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/almond.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Миндаль, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-before"></div>
+                                <div class="product__price-after">1500 ₽</div>
+                            </div>
+                            <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+                        </div>
+                        <div class="product">
+                            <div class="product__link">
+                                <a class="product__img" href="#"><img src="assets/img/hazelnut-shell.jpg" alt="product" width="220px" height="210px"></a>
+                            </div>
+                            <div class="product__name"><a class="product__name-link" href="#">Фундук в скорлупе, 1 кг</a></div>
+                            <div class="product__price">
+                                <div class="product__price-after">1000 ₽</div>
+                            </div>
+                            <!-- <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button> -->
+                            <div class="product__btn-active">
+                                <button class="product__btn-minus">-</button>
+                                <button class="product__btn-text">В корзине 1 кг Перейти</button>
+                                <button class="product__btn-plus">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="stock">
+                    <h3 class="stock__title title">Акции</h3>
+                    <div class="stock__items">
+                        <div class="stock__item">
+                            <a class="stock__link" href="#"><img class="stock__img" src="assets/img/broccoli.jpg" alt="img" width="315px" height="315px"></a>
+                            <div class="stock__text"><a class="stock__text-link" href="#">Отборные фрукты и овощи, с привлекательной ценой</a></div>
+                            <div class="stock__data">10.11.2020</div>
+                        </div>
+                        <div class="stock__item">
+                            <a class="stock__link" href="#"><img class="stock__img" src="assets/img/oysters.jpg" alt="img" width="315px" height="315px"></a>
+                            <div class="stock__text"><a class="stock__text-link" href="#">Дни испанской кухни</a></div>
+                            <div class="stock__data">10.11.2020</div>
+                        </div>
+                        <div class="stock__item">
+                            <a class="stock__link" href="#"><img class="stock__img" src="assets/img/coffee.jpg" alt="img" width="315px" height="315px"></a>
+                            <div class="stock__text"><a class="stock__text-link" href="#">Скидка на зерновой кофе</a></div>
+                            <div class="stock__data">10.11.2020</div>
+                        </div>
+                        <div class="stock__item">
+                            <a class="stock__link" href="#"><img class="stock__img" src="assets/img/bakery.jpg" alt="img" width="315px" height="315px"></a>
+                            <div class="stock__text"><a class="stock__text-link" href="#">Скидка на всю выпечку 40% после 19:00</a></div>
+                            <div class="stock__data">10.11.2020</div>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="reviews">
+                    <h3 class="reviews__title title">Отзывы клиентов</h3>
+                    <div class="reviews__items">
+                        <div class="reviews__item">
+                            <div class="reviews__name">Alexey</div>
+                            <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.</div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews__name">Elena</div>
+                            <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.</div>
+                        </div>
+                        <div class="reviews__item">
+                            <div class="reviews__name">Alexey</div>
+                            <div class="reviews__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pellentesque ultrices tincidunt. Sed malesuada ipsum tellus, eget auctor nisl luctus vitae. Duis nec eros turpis. Sed convallis felis dui, sed suscipit nisi lobortis id.</div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="connection">
+                    <h3 class="connection__title title">Обратная связь</h3>
+                    <form action="#" name="newform" method="post" class="connection__form">
+                        <div class="connection__form-inputs">
+                            <input class="connection__input" type="text" placeholder="Имя*">
+                            <input class="connection__input" type="text" placeholder="Ваша почта*">
+                        </div>
+                        <textarea class="connection__textarea" name="text" placeholder="Ваш вопрос, отзыв или пожелание*"></textarea>
+                        <div class="connection__confirmation">
+                            <input id="formConfirmation" class="connection__confirmation-input" type="checkbox" name="confirmation">
+                            <label for="formConfirmation" class="connection__confirmation-label">Настоящим подтверждаю, что я ознакомлен и согласен с условиями оферты и политики конфиденциальности *</label>
+                        </div>
+                        <button class="connection__btn btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="wrapper">
+                <!-- <div class="footer__title">
+                    <div class="footer__menu">
+                        <div class="footer__item">
+                            <div class="footer__item-info">О магазине Марком</div>
+                            <a href="#" class="footer__item-link">Адреса магазинов</a>
+                            <a href="#" class="footer__item-link">Акции и скидки</a>
+                            <a href="#" class="footer__item-link">Юридическим лицам</a>
+                            <a href="#" class="footer__item-link">Как заказать</a>
+                            <a href="#" class="footer__item-link">Обмен и возврат</a>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__item-info">Покупателям</div>
+                            <a href="#" class="footer__item-link">Личный кабинет</a>
+                            <a href="#" class="footer__item-link">Мои заказы</a>
+                            <a href="#" class="footer__item-link">Вопросы и ответы</a>
+                            <a href="#" class="footer__item-link">Политика возврата</a>
+                        </div>
+                        <div class="footer__item">
+                            <div class="footer__item-info">Информация</div>
+                            <a href="#" class="footer__item-link">Политика конфиденциальности и оферта</a>
+                            <a href="#" class="footer__item-link">Пользовательское соглашение</a>
+                        </div>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__social">
+                            <div class="footer__social-text">Мы в соц. сетях</div>
+                            <div class="footer__social-items">
+                                <img src="assets/img/footer/dz.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/fb.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/twitter.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/vk.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/yt.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/insta.svg" alt="" class="footer__social-icon">
+                                <img src="assets/img/footer/telegram.svg" alt="" class="footer__social-icon">
+                            </div>
+                        </div>
+                        <div class="footer__number">
+                            <div class="footer__number-item">
+                                <a href="tel:+78008008080" class="footer__number-value">+7(800) 800-80-80</a>
+                                <div class="footer__number-text">справочная служба</div>
+                            </div>
+                            <div class="footer__number-item">
+                                <a href="tel:+78008008080" class="footer__number-value">+7(800) 800-80-80</a>
+                                <div class="footer__number-text">интернет-магазин</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="footer__icons">
+                    <div class="footer__logo"><a class="footer__logo-link" href="#"><img src="assets/img/footer/black-logo.svg" alt="" width="220px" height="50px"></a></div>
+                    <div class="footer__cards">
+                        <div class="footer__cards-item"><img src="assets/img/footer/mastercard.svg" alt="icon"></div>
+                        <div class="footer__cards-item"><img src="assets/img/footer/visa.svg" alt="icon"></div>
+                        <div class="footer__cards-item"><img src="assets/img/footer/mir.svg" alt="icon"></div>
+                    </div>
+                </div>
+                <div class="footer__permission">
+                    <div class="footer__permission-text">© 2020 Любое использование контента без письменного разрешения запрещено</div>
+                    <div class="footer__permission-text">Интернет-магазин создан на InSales</div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    `;
+};
+
+mainPage();
