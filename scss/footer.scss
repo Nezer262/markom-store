@@ -93,6 +93,13 @@
         margin-top: 60px;
     }
 
+    &__logo {
+
+        &-link {
+            display: block;
+        }
+    }
+
     &__cards {
         display: flex;
         align-items: center;
