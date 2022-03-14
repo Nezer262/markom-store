@@ -1,32 +1,17 @@
 import { Product } from "../product/product";
+import { ProductCart } from "../product/productCart";
 
 export const Arrival = () => {
     return `
     <div class="arrival">
         <h3 class="arrival__title title">Новое поступление</h3>
         <div class="arrival__products">
-            ${Product}
-            ${Product}
-            ${Product}
-            ${Product}
-            ${Product}
-            <div class="product">
-                <div class="product__link">
-                    <a class="product__img" href="#"><img src="assets/img/peach.jpg" alt="product" width="220px" height="210px"></a>
-                    <div class="product__sticker">-13%</div>
-                </div>
-                <div class="product__name"><a class="product__name-link" href="#">Персик, 1 кг</a></div>
-                <div class="product__price">
-                    <div class="product__price-before">110 ₽</div>
-                    <div class="product__price-after">96 ₽</div>
-                </div>
-                <!-- <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button> -->
-                <div class="product__btn-active">
-                    <button class="product__btn-minus">-</button>
-                    <button class="product__btn-text">В корзине 1 кг Перейти</button>
-                    <button class="product__btn-plus">+</button>
-                </div>
-            </div>
+            ${Product({img: 'assets/img/foreign.png', sticker: '-56%', name: 'Авокадо, 1 шт', priceBefore: '135 ₽', priceAfter: '59 ₽'})}
+            ${Product({img: 'assets/img/ananas.jpg', name: 'Ананас, 1 шт', priceAfter: '146 ₽'})}
+            ${Product({img: 'assets/img/pomegranate.jpg', sticker: '-9%', name: 'Гранат, 1 кг', priceBefore: '320 ₽', priceAfter: '290 ₽'})}
+            ${Product({img: 'assets/img/grapefruit.jpg', sticker: '-26%', name: 'Грейпфрут, 1 кг', priceBefore: '190 ₽', priceAfter: '140 ₽'})}
+            ${Product({img: 'assets/img/pear.jpg', name: 'Груша дюшес, 1 кг', priceAfter: '89 ₽'})}
+            ${ProductCart({img: 'assets/img/peach.jpg', sticker: '-13%', name: 'Персик, 1 кг', priceBefore: '110 ₽', priceAfter: '96 ₽'})}
         </div>
     </div>
     `;

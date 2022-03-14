@@ -1,4 +1,4 @@
-export const Product = (props) => {
+export const ProductCart = (props) => {
     const {img, sticker, name, priceBefore, priceAfter} = props;
     return `
     <div class="product">
@@ -11,7 +11,11 @@ export const Product = (props) => {
             <div class="product__price-before">${priceBefore}</div>
             <div class="product__price-after">${priceAfter}</div>
         </div>
-        <button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>
+        <div class="product__btn-active">
+            <button class="product__btn-minus">-</button>
+            <button class="product__btn-text">В корзине 1 кг Перейти</button>
+            <button class="product__btn-plus">+</button>
+        </div>
     </div>
     `;
 }

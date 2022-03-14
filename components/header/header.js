@@ -1,3 +1,7 @@
+import { listData } from "../data/main-page/list-data";
+import { telData } from "../data/main-page/tel-data";
+import { btnData } from "../data/main-page/btn-data";
+import { controlsData } from "../data/main-page/controls-data";
 import { Btn } from "./btn/btn";
 import { Controls } from "./controls/controls";
 import { list } from "./list/list"
@@ -12,18 +16,18 @@ export const Header = () => {
             <nav class="nav">
                 <div class="nav__menu">
                     <div class="nav-left">
-                        ${list}
+                        ${list(listData)}
                     </div>
                     <div class="nav-right">
-                        ${tel}
+                        ${tel(telData)}
                     </div>
                 </div>
             </nav>
             <div class="menu">
                 ${Logo}
-                ${Btn}
+                ${Btn(btnData)}
                 ${Search}
-                ${Controls}
+                ${Controls(controlsData)}
             </div>
         </div>
     </div>
