@@ -11,7 +11,7 @@ export const Drinks = () => {
             ${Product({img: 'assets/img/pomegranate-juice.jpg', name: 'Сок гранат, 1 л', priceAfter: '140 ₽'})}
             ${Product({img: 'assets/img/grapefruit-juice.jpg', name: 'Сок грейпфут, 1 л', priceAfter: '120 ₽'})}
             ${Product({img: 'assets/img/apple-juice.jpg', name: 'Сок яблоко, 1 л', priceAfter: '>100 ₽'})}
-            ${ProductCart({img: 'assets/img/ananas-juice.png', name: 'Сок ананас, 1 л', priceAfter: '120 ₽'})}
+            ${ProductCart({img: 'assets/img/ananas-juice.png', name: 'Сок ананас, 1 л', priceAfter: '120 ₽'}, isCard)}
         </div>
     </div>
     `;

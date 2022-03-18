@@ -11,7 +11,7 @@ export const Nuts = () => {
             ${Product({img: 'assets/img/pistachios.jpg', name: 'Фисташки в скорлупе, 1 кг', priceAfter: '900 ₽'})}
             ${Product({img: 'assets/img/cashew.jp', name: 'Кешью, 1 кг', priceAfter: '1128 ₽'})}
             ${Product({img: 'assets/img/almond.jpg', name: 'Миндаль, 1 кг', priceAfter: '>1500 ₽'})}
-            ${ProductCart({img: 'assets/img/hazelnut-shell.jpg', name: 'Фундук в скорлупе, 1 кг', priceAfter: '1000 ₽'})}
+            ${ProductCart({img: 'assets/img/hazelnut-shell.jpg', name: 'Фундук в скорлупе, 1 кг', priceAfter: '1000 ₽'}, isCard)}
         </div>
     </div>
     `;

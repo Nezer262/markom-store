@@ -1,21 +1,19 @@
 import { Footer } from "../../components/footer/footer";
 import { Header } from "../../components/header/header"
-import { Main } from "../../components/main/main";
+import { Main } from "../../components/pages/main/main";
 
 export const mainPage = () => {
     return `
-    <body>
         <header>
-            ${Header}
+            ${Header()}
         </header>
 
         <main>
-            ${Main}
+            ${Main()}
         </main>
 
         <footer class="footer">
-            ${Footer}
+            ${Footer()}
         </footer>
-    </body>
     `;
 };

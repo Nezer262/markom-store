@@ -11,7 +11,7 @@ export const Arrival = () => {
             ${Product({img: 'assets/img/pomegranate.jpg', sticker: '-9%', name: 'Гранат, 1 кг', priceBefore: '320 ₽', priceAfter: '290 ₽'})}
             ${Product({img: 'assets/img/grapefruit.jpg', sticker: '-26%', name: 'Грейпфрут, 1 кг', priceBefore: '190 ₽', priceAfter: '140 ₽'})}
             ${Product({img: 'assets/img/pear.jpg', name: 'Груша дюшес, 1 кг', priceAfter: '89 ₽'})}
-            ${ProductCart({img: 'assets/img/peach.jpg', sticker: '-13%', name: 'Персик, 1 кг', priceBefore: '110 ₽', priceAfter: '96 ₽'})}
+            ${ProductCart({img: 'assets/img/peach.jpg', sticker: '-13%', name: 'Персик, 1 кг', priceBefore: '110 ₽', priceAfter: '96 ₽'}, isCard)}
         </div>
     </div>
     `;

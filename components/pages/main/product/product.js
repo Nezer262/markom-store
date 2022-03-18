@@ -1,5 +1,13 @@
-export const ProductCart = (props) => {
+export const Product = (props, isCard = false) => {
     const {img, sticker, name, priceBefore, priceAfter} = props;
+    const btnDefault = `<button class="product__btn">В корзину<img class="product__btn-img" src="assets/img/cart-white.png" alt="" width="18px"></button>`;
+    const btnActive = `
+    <div class="product__btn-active">
+        <button class="product__btn-minus">-</button>
+        <button class="product__btn-text">В корзине 1 кг Перейти</button>
+        <button class="product__btn-plus">+</button>
+    </div>`;
+    const btnChoose = isCard ? btnActive : btnDefault;
     return `
     <div class="product">
         <div class="product__link">
@@ -11,11 +19,7 @@ export const ProductCart = (props) => {
             <div class="product__price-before">${priceBefore}</div>
             <div class="product__price-after">${priceAfter}</div>
         </div>
-        <div class="product__btn-active">
-            <button class="product__btn-minus">-</button>
-            <button class="product__btn-text">В корзине 1 кг Перейти</button>
-            <button class="product__btn-plus">+</button>
-        </div>
+        ${btnChoose}
     </div>
     `;
 }

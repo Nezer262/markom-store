@@ -1,7 +1,7 @@
-import { listData } from "../data/main-page/list-data";
-import { telData } from "../data/main-page/tel-data";
-import { btnData } from "../data/main-page/btn-data";
-import { controlsData } from "../data/main-page/controls-data";
+import { listData } from "../store/main-page/list-data";
+import { telData } from "../store/main-page/tel-data";
+import { btnData } from "../store/main-page/btn-data";
+import { controlsData } from "../store/main-page/controls-data";
 import { Btn } from "./btn/btn";
 import { Controls } from "./controls/controls";
 import { list } from "./list/list"
