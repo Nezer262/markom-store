@@ -108,8 +108,7 @@ const routes = [
 const parseLocation = () => location.hash.slice(1).toLowerCase() || "/";
 
 const findComponentByPath = (path, routes) =>
-  routes.find((r) => r.path.match(new RegExp(`^\\${path}$`, "gm"))) ||
-  undefined;
+  routes.find((r) => r.path.match(new RegExp(`^\\${path}$`, "gm"))) || undefined;
 
 const router = () => {
   // Find the component based on the current path
@@ -118,8 +117,9 @@ const router = () => {
   const { component = ErrorComponent } =
     findComponentByPath(path, routes) || {};
   // Render the component in the "app" placeholder
-  document.querySelector("#root").innerHTML = "";
-  document.querySelector("#root").append(component.render());
+  /* document.querySelector("#root").innerHTML = "";
+  document.querySelector("#root").append(component.render()); */
+  document.querySelector('#root').innerHTML = component.render();
 };
 
 window.addEventListener("hashchange", router);
