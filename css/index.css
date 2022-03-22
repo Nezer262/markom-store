@@ -373,6 +373,8 @@
   color: #1f7d63;
 }
 .product__price {
+  position: relative;
+  height: 50px;
   margin-top: 30px;
 }
 .product__price-before {
@@ -381,9 +383,11 @@
   text-decoration: line-through;
 }
 .product__price-after {
+  position: absolute;
   color: #333333;
   font-size: 1.75rem;
   font-weight: 600;
+  bottom: 0;
 }
 .product__price-active {
   padding-bottom: 21px;

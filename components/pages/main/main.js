@@ -1,10 +1,10 @@
-import { sliderData } from "../../store/main-page/slider-data";
-import { Arrival } from "./arrival/arrival";
-import { Banner } from "./banner/banner";
-import { Connection } from "./connection/connection";
-import { Drinks } from "./drinks/drinks";
-import { Nuts } from "./nuts/nuts";
-import { Slider } from "./slider/slider";
+import { sliderData } from "../../store/main-page/slider-data.js";
+import { Arrival } from "./arrival/arrival.js";
+import { Banner } from "./banner/banner.js";
+import { Connection } from "./connection/connection.js";
+import { Drinks } from "./drinks/drinks.js";
+import { Nuts } from "./nuts/nuts.js";
+import { Slider } from "./slider/slider.js";
 
 export const Main = () => {
     return `

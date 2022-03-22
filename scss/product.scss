@@ -41,6 +41,8 @@
     }
 
     &__price {
+        position: relative;
+        height: 50px;
         margin-top: 30px;
 
         &-before {
@@ -51,9 +53,11 @@
         }
 
         &-after {
+            position: absolute;
             color: rgb(51, 51, 51);
             font-size: 1.75rem;
             font-weight: 600;
+            bottom: 0;
         }
 
         &-active {

@@ -1,13 +1,13 @@
-import { listData } from "../store/main-page/list-data";
-import { telData } from "../store/main-page/tel-data";
-import { btnData } from "../store/main-page/btn-data";
-import { controlsData } from "../store/main-page/controls-data";
-import { Btn } from "./btn/btn";
-import { Controls } from "./controls/controls";
-import { list } from "./list/list"
-import { Logo } from "./logo/logo";
-import { Search } from "./search/search";
-import { tel } from "./tel/tel"
+import { listData } from "../store/main-page/list-data.js";
+import { telData } from "../store/main-page/tel-data.js";
+import { btnData } from "../store/main-page/btn-data.js";
+import { controlsData } from "../store/main-page/controls-data.js";
+import { Btn } from "./btn/btn.js";
+import { Controls } from "./controls/controls.js";
+import { list } from "./list/list.js"
+import { Logo } from "./logo/logo.js";
+import { Search } from "./search/search.js";
+import { tel } from "./tel/tel.js"
 
 export const Header = () => {
     return `
@@ -24,9 +24,9 @@ export const Header = () => {
                 </div>
             </nav>
             <div class="menu">
-                ${Logo}
+                ${Logo()}
                 ${Btn(btnData)}
-                ${Search}
+                ${Search()}
                 ${Controls(controlsData)}
             </div>
         </div>

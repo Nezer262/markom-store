@@ -1,4 +1,4 @@
-import { mainPage } from "./pages/main-page/main-page";
+import { mainPage } from "./pages/main-page/main-page.js";
 
 const mainComponent = {
   render: () => {
