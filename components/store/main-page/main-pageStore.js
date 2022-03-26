@@ -23,12 +23,12 @@ export const mainPageStore = {
         name: "Премиум продукты высокого качества",
     },
     arrivalProductsData: [
-        {img: 'assets/img/foreign.png', sticker: '-56%', name: 'Авокадо, 1 шт', priceBefore: '135 ₽', priceAfter: '59 ₽'},
-        {img: 'assets/img/ananas.jpg', name: 'Ананас, 1 шт', priceBefore: '', priceAfter: '146 ₽'},
-        {img: 'assets/img/pomegranate.jpg', sticker: '-9%', name: 'Гранат, 1 кг', priceBefore: '320 ₽', priceAfter: '290 ₽'},
-        {img: 'assets/img/grapefruit.jpg', sticker: '-26%', name: 'Грейпфрут, 1 кг', priceBefore: '190 ₽', priceAfter: '140 ₽'},
-        {img: 'assets/img/pear.jpg', name: 'Груша дюшес, 1 кг', priceBefore: '', priceAfter: '89 ₽'},
-        {img: 'assets/img/peach.jpg', sticker: '-13%', name: 'Персик, 1 кг', priceBefore: '110 ₽', priceAfter: '96 ₽'},
+        {id: 0, img: 'assets/img/foreign.png', sticker: '-56%', name: 'Авокадо, 1 шт', priceBefore: '135 ₽', priceAfter: '59 ₽', isCard: false},
+        {id: 1, img: 'assets/img/ananas.jpg', name: 'Ананас, 1 шт', priceBefore: '', priceAfter: '146 ₽', isCard: false},
+        {id: 2, img: 'assets/img/pomegranate.jpg', sticker: '-9%', name: 'Гранат, 1 кг', priceBefore: '320 ₽', priceAfter: '290 ₽', isCard: false},
+        {id: 3, img: 'assets/img/grapefruit.jpg', sticker: '-26%', name: 'Грейпфрут, 1 кг', priceBefore: '190 ₽', priceAfter: '140 ₽', isCard: false},
+        {id: 4, img: 'assets/img/pear.jpg', name: 'Груша дюшес, 1 кг', priceBefore: '', priceAfter: '89 ₽', isCard: false},
+        {id: 5, img: 'assets/img/peach.jpg', sticker: '-13%', name: 'Персик, 1 кг', priceBefore: '110 ₽', priceAfter: '96 ₽', isCard: false},
     ],
     drinksProductsData: [
         {img: 'assets/img/orange-juice.jpg', name: 'Сок апельсин, 1 л', priceBefore: '', priceAfter: '120 ₽'},

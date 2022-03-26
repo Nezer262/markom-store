@@ -1,3 +1,4 @@
+import { mainPageStore } from "./components/store/main-page/main-pageStore.js";
 import { mainPage } from "./pages/main-page/main-page.js";
 
 const mainComponent = {
@@ -124,3 +125,40 @@ const router = () => {
 
 window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
+
+function btnPress() {
+  const arrivalProducts = document.querySelector(".arrival__products");
+  const products = document.querySelector(".arrival__products .product");
+
+  products.forEach(product => {
+    product.addEventListener('click', function(event) {
+      if (event.target.className !== 'product__btn') {
+        return;
+      }
+      const currentProductId = this.dataset.id;
+      mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+      const str = loadData(mainPageStore)
+      arrivalProducts.innerHTML = str
+    });
+  });
+
+  document.addEventListener('click', function() {
+    const arrivalProducts = document.querySelector(".arrival__products");
+    const products = document.querySelector(".arrival__products .product");
+
+    products.forEach(product => {
+      product.addEventListener('click', function(event) {
+        if (event.target.className !== 'product__btn') {
+          return;
+        }
+        console.log(event);
+        const currentProductId = this.dataset.id;
+        mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+        const str = loadData(mainPageStore)
+        arrivalProducts.innerHTML = str
+      })
+    })
+  })
+};
+
+window.addEventListener('load', btnPress);
