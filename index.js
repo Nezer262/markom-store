@@ -128,10 +128,11 @@ window.addEventListener("load", router);
 
 function btnPress() {
   const arrivalProducts = document.querySelector(".arrival__products");
-  const products = document.querySelector(".arrival__products .product");
+  const products = document.querySelectorAll(".arrival__products .product");
 
   products.forEach(product => {
     product.addEventListener('click', function(event) {
+      console.log(arrivalProducts)
       if (event.target.className !== 'product__btn') {
         return;
       }
@@ -144,7 +145,7 @@ function btnPress() {
 
   document.addEventListener('click', function() {
     const arrivalProducts = document.querySelector(".arrival__products");
-    const products = document.querySelector(".arrival__products .product");
+    const products = document.querySelectorAll(".arrival__products .product");
 
     products.forEach(product => {
       product.addEventListener('click', function(event) {

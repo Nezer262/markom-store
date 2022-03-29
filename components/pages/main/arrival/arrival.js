@@ -1,9 +1,9 @@
 import { mainPageStore } from "../../../store/main-page/main-pageStore.js";
 import { Product } from "../product/product.js";
 
-const loadData = () => {
+const loadData = (data) => {
     let newStr = "";
-    mainPageStore.arrivalProductsData.forEach(item => {
+    data.arrivalProductsData.forEach(item => {
         newStr += Product(item);
     })
     return newStr;
@@ -14,7 +14,7 @@ export const Arrival = () => {
     <div class="arrival">
         <h3 class="arrival__title title">Новое поступление</h3>
         <div class="arrival__products">
-            ${loadData()}
+            ${loadData(mainPageStore)}
         </div>
     </div>
     `;
