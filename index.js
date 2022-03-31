@@ -1,4 +1,6 @@
-import { loadData } from "./components/pages/main/arrival/arrival.js";
+import { loadDataArrival } from "./components/pages/main/arrival/arrival.js";
+import { loadDataDrinks } from "./components/pages/main/drinks/drinks.js";
+import { loadDataNuts } from "./components/pages/main/nuts/nuts.js";
 import { mainPageStore } from "./components/store/main-page/main-pageStore.js";
 import { mainPage } from "./pages/main-page/main-page.js";
 
@@ -127,7 +129,7 @@ const router = () => {
 window.addEventListener("hashchange", router);
 window.addEventListener("load", router);
 
-function btnPress() {
+function btnPressArrival() {
   const arrivalProducts = document.querySelector(".arrival__products");
   const products = document.querySelectorAll(".arrival__products .product");
 
@@ -136,11 +138,10 @@ function btnPress() {
       if (event.target.className !== 'product__btn') {
         return;
       }
-      const currentProductId = this.dataset.id;
-      if ( mainPageStore.arrivalProductsData[currentProductId]?.isCard) {
-        mainPageStore.arrivalProductsData[currentProductId].isCard = true;
-      }
-      const str = loadData(mainPageStore)
+      const currentProductId = this.dataset.order;
+      console.log(this)
+      mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+      const str = loadDataArrival(mainPageStore)
       arrivalProducts.innerHTML = str
     });
   });
@@ -154,16 +155,85 @@ function btnPress() {
         if (event.target.className !== 'product__btn') {
           return;
         }
-        const currentProductId = this.dataset.id;
-        if ( mainPageStore.arrivalProductsData[currentProductId]?.isCard) {
-          mainPageStore.arrivalProductsData[currentProductId].isCard = true;
-        }
-        console.log(mainPageStore)
-        const str = loadData(mainPageStore)
+        const currentProductId = this.dataset.order;
+        mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+        const str = loadDataArrival(mainPageStore)
         arrivalProducts.innerHTML = str
       })
     })
   })
 };
 
-window.addEventListener('load', btnPress);
+window.addEventListener('load', btnPressArrival);
+
+function btnPressDrinks () {
+  const drinksProducts = document.querySelector(".drinks__products");
+  const products = document.querySelectorAll(".drinks__products .product");
+  
+  products.forEach(product => {
+    product.addEventListener('click', function(event) {
+      if (event.target.className !== "product__btn") {
+        return;
+      }
+      const currentProductId = this.dataset.order;
+      mainPageStore.drinksProductsData[currentProductId].isCard = true;
+      const str = loadDataDrinks(mainPageStore);
+      drinksProducts.innerHTML = str;
+    })
+  })
+
+  document.addEventListener('click', function () {
+    const drinksProducts = document.querySelector(".drinks__products");
+    const products = document.querySelectorAll(".drinks__products .product");
+  
+    products.forEach(product => {
+      product.addEventListener('click', function(event) {
+        if (event.target.className !== "product__btn") {
+          return;
+        }
+        const currentProductId = this.dataset.order;
+        mainPageStore.drinksProductsData[currentProductId].isCard = true;
+        const str = loadDataDrinks(mainPageStore);
+        drinksProducts.innerHTML = str;
+    })
+  })
+  })
+}
+
+window.addEventListener('load', btnPressDrinks);
+
+function btnPressNuts () {
+  const nutsProducts = document.querySelector(".nuts__products")
+  const products = document.querySelectorAll(".nuts__products .product")
+
+  products.forEach(product => {
+    product.addEventListener('click', function(event) {
+      if (event.target.className !== 'product__btn') {
+        return;
+      }
+      const currentProductId = this.dataset.order;
+      mainPageStore.nutsProductsData[currentProductId].isCard = true;
+      const str = loadDataNuts(mainPageStore);
+      nutsProducts.innerHTML = str;
+    })
+  })
+
+  document.addEventListener('click', function () {
+    const nutsProducts = document.querySelector(".nuts__products")
+    const products = document.querySelectorAll(".nuts__products .product")
+
+    products.forEach(product => {
+      product.addEventListener('click', function(event) {
+        if (event.target.className !== 'product__btn') {
+          return;
+        }
+        const currentProductId = this.dataset.order;
+        mainPageStore.nutsProductsData[currentProductId].isCard = true;
+        const str = loadDataNuts(mainPageStore);
+        nutsProducts.innerHTML = str;
+      })
+    })
+  })
+}
+
+window.addEventListener('load', btnPressNuts);
