@@ -1,7 +1,7 @@
 import { mainPageStore } from "../../../store/main-page/main-pageStore.js";
 import { Product } from "../product/product.js";
 
-const loadData = (data) => {
+export const loadData = (data) => {
     let newStr = "";
     data.arrivalProductsData.forEach(item => {
         newStr += Product(item);

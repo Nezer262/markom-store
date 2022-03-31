@@ -1,3 +1,4 @@
+import { loadData } from "./components/pages/main/arrival/arrival.js";
 import { mainPageStore } from "./components/store/main-page/main-pageStore.js";
 import { mainPage } from "./pages/main-page/main-page.js";
 
@@ -132,12 +133,13 @@ function btnPress() {
 
   products.forEach(product => {
     product.addEventListener('click', function(event) {
-      console.log(arrivalProducts)
       if (event.target.className !== 'product__btn') {
         return;
       }
       const currentProductId = this.dataset.id;
-      mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+      if ( mainPageStore.arrivalProductsData[currentProductId]?.isCard) {
+        mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+      }
       const str = loadData(mainPageStore)
       arrivalProducts.innerHTML = str
     });
@@ -152,9 +154,11 @@ function btnPress() {
         if (event.target.className !== 'product__btn') {
           return;
         }
-        console.log(event);
         const currentProductId = this.dataset.id;
-        mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+        if ( mainPageStore.arrivalProductsData[currentProductId]?.isCard) {
+          mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+        }
+        console.log(mainPageStore)
         const str = loadData(mainPageStore)
         arrivalProducts.innerHTML = str
       })
