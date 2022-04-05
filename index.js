@@ -139,7 +139,6 @@ function btnPressArrival() {
         return;
       }
       const currentProductId = this.dataset.order;
-      console.log(this)
       mainPageStore.arrivalProductsData[currentProductId].isCard = true;
       const str = loadDataArrival(mainPageStore)
       arrivalProducts.innerHTML = str
@@ -220,7 +219,7 @@ function btnPressNuts () {
 
   document.addEventListener('click', function () {
     const nutsProducts = document.querySelector(".nuts__products")
-    const products = document.querySelectorAll(".nuts__products .product")
+    const products = document.querySelectorAll(".product")
 
     products.forEach(product => {
       product.addEventListener('click', function(event) {
@@ -237,3 +236,22 @@ function btnPressNuts () {
 }
 
 window.addEventListener('load', btnPressNuts);
+
+function plusPressArrival () {
+  const arrivalProducts = document.querySelector(".arrival__products")
+  const products = document.querySelectorAll(".product .product__btn-plus")
+
+  products.forEach(product => {
+    product.addEventListener('click', function (event) {
+      if (event.target.className !== 'product__btn-active') {
+        return;
+      }
+      const currentProductId = this.dataset.order;
+      mainPageStore.arrivalProductsData[currentProductId].kg += 1;
+      const str = loadDataArrival(mainPageStore)
+      arrivalProducts.innerHTML = str
+    })
+  })
+}
+
+window.addEventListener('load', plusPressArrival);
