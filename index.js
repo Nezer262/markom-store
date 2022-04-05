@@ -148,6 +148,7 @@ function btnPressArrival() {
   document.addEventListener('click', function() {
     const arrivalProducts = document.querySelector(".arrival__products");
     const products = document.querySelectorAll(".arrival__products .product");
+    const plus = document.querySelector("product__btn-active")
 
     products.forEach(product => {
       product.addEventListener('click', function(event) {
@@ -156,6 +157,19 @@ function btnPressArrival() {
         }
         const currentProductId = this.dataset.order;
         mainPageStore.arrivalProductsData[currentProductId].isCard = true;
+        const str = loadDataArrival(mainPageStore)
+        arrivalProducts.innerHTML = str
+      })
+    })
+
+    products.forEach(product => {
+      product.addEventListener('click', function(event) {
+        if (event.target.className !== 'product__btn') {
+          return;
+        }
+        const currentProductId = this.dataset.order;
+        mainPageStore.arrivalProductsData[currentProductId].isCard += 1;
+        console.log(mainPageStore)
         const str = loadDataArrival(mainPageStore)
         arrivalProducts.innerHTML = str
       })
@@ -237,21 +251,23 @@ function btnPressNuts () {
 
 window.addEventListener('load', btnPressNuts);
 
-function plusPressArrival () {
+/* function plusPressArrival () {
   const arrivalProducts = document.querySelector(".arrival__products")
-  const products = document.querySelectorAll(".product .product__btn-plus")
+  const products = document.querySelectorAll(".product")
 
   products.forEach(product => {
     product.addEventListener('click', function (event) {
-      if (event.target.className !== 'product__btn-active') {
+      if (event.target.className !== 'product__btn') {
         return;
       }
       const currentProductId = this.dataset.order;
       mainPageStore.arrivalProductsData[currentProductId].kg += 1;
+      console.log(mainPageStore)
       const str = loadDataArrival(mainPageStore)
       arrivalProducts.innerHTML = str
+      console.log(arrivalProducts)
     })
   })
 }
 
-window.addEventListener('load', plusPressArrival);
+window.addEventListener('load', plusPressArrival); */
